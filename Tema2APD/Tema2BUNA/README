@@ -1,0 +1,30 @@
+//Oprea Ionut 334CB
+
+In implementarea temei am folosit 4 clase.
+
+Descrierea claselor:
+
+	- Event : Clasa folosita pentru a retine obiectele de tip eveniment.
+	Contine 2 campuri: numarul(N) si tipul(ex. FIB).
+
+	- EventGenerator : Clasa folosita pentru a genera evenimentele.In
+	aceasta clasa am citit din fisier fiecare linie, am asteptat 
+	timpul necesar, dupa care am creat si am adaugat in coada principala
+	fiecare eveniment creat. Aceasta clasa este de tipul Runnable.
+
+	- WorkerPool : Clasa de tipul Runnable. Aceasta clasa contine
+	toate functiile necesare prelucrarii evenimentelor(FIB, FACT, SQUARE
+	si PRIME). In metoda run() am extras evenimente din coada si le-am
+	prelucrat corespunzator in functie de tipul acesteia si de numarul
+	N (campuri ale evenimentului). Astfel pun intr-o lista toate 
+	elementele rezultate in urma rularii functiilor pe care mai apoi
+	le scriu in fisierele de output(ex. FIB.out),Am implementat 
+	ExecutorService asemanator laborului si am folosit submit.
+
+	- Main : Clasa in care este si metoda main. Contine coada in care
+	sunt adaugate evenimentele si cele 4 liste folosite pentru retinerea
+	rezultatelor obtinute in WorkerPool (FIB, FACT, PRIME si SQUARE).
+	Aici am prelucrat argumentele primite si amcreat thread-urile 
+	corespunzator cerintei.
+
+Ca surse de inspiratie am folosit implementarile realizate la laborator.
